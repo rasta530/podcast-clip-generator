@@ -1,0 +1,12 @@
+# Podcast Clip Generator (Railway-ready)
+
+Quick steps to deploy:
+
+1. Create a GitHub repository and push this project.
+2. Create a Railway project and connect the GitHub repo.
+3. Add optional environment variables from `.env.example` (S3 credentials recommended).
+4. Deploy — Railway will build the Docker image and run the service.
+5. Use the endpoint `POST /generate_clip` with JSON payload:
+
+```json
+{ "podcast_url": "https://example.com/episode.mp3", "clip_length": 30 }
